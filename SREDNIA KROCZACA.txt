@@ -1,0 +1,24 @@
+import numpy as np
+
+def moving_avrage(array, window, step):
+    ma_array = np.array([])
+    # niedok³adny wzór ale mniej wiecej bêdzie dzia³a³o
+    num_of_windows = int((int_arr.size-window+1)/step)+1
+
+    for item in range(num_of_windows):
+        index=item+step
+        n_window = int_arr[index:index+window]
+        avr_of_window = n_window.sum()/window
+        ma_array=np.append(ma_array, avr_of_window)    
+    return ma_array
+
+r_arr = np.random.randint(
+    low = 1,
+    high = 100,
+    size =100
+    )
+int_arr = r_arr * np.arange(1,101) 
+int_arr
+
+random_num_ma_array = moving_avrage(r_arr, 5, 5)
+random_num_ma_array
